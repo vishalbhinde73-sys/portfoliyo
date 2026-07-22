@@ -35,3 +35,37 @@ body{
     z-index: 1000;
 }
 
+
+.navbar{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu-toggle{
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.logo{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+
+
+.logo span{
+    color: cyan;
+}
+
+
+.nav-links{
+    display
+}
