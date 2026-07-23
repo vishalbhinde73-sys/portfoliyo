@@ -165,3 +165,29 @@ body{
 }
 
 
+.btn-secondry:hover{
+    background: #3B82F6;
+}
+
+
+.hero-image{
+    flex:1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.hero-image img{
+    width: 350px;
+    max-width: 100%;
+}
+
+
+.typing-text{
+    margin-top: 25px;
+    font-size: 24px;
+    color: #2563EB;
+    font-weight: 600;
+    height: 35px;
+}
+
