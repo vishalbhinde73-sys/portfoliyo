@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:wght@300;400;500;600;700;800&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -123,5 +126,42 @@ body{
     margin-bottom: 15px;
 }
 
+
+.hero-content h1{
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+
+
+.hero-content h2{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+
+.hero-description{
+    font-size: 1.1rem;
+    color: aliceblue;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary{
+    background: #2563EB;
+}
+
+
+.btn-secondry{
+    border:2px solid #3B82F6;
+    color: white;
+}
 
 
