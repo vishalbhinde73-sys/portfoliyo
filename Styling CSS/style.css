@@ -67,5 +67,61 @@ body{
 
 
 .nav-links{
-    display
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
+
+
+.nav-links li{
+    list-style: none;
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3;
+}
+
+
+.nav-links a:hover{
+    color: aqua;
+}
+
+
+.nav-links a.hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+
+.nav-links a.active{
+    color: aqua;
+}
+
+
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.hero-content{
+    flex: 1;
+}
+
+
+.hero-greeting{
+    font-size: 1.5rem;
+    color: aqua;
+    margin-bottom: 15px;
+}
+
+
+
