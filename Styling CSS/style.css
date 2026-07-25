@@ -16,7 +16,7 @@ html{
 
 body{
     font-family:'poppins' ,sans-serif;
-    background: black;
+    background: whitesmoke;
     color: white;
 }
 
@@ -32,9 +32,9 @@ body{
     position:fixed;
     top:0;
     width:100%;
-    background: rgba(11,17,32,0.9);
+    background:  rgb(73, 145, 153);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(237, 229, 229, 0.1);
     z-index: 1000;
 }
 
@@ -65,7 +65,7 @@ body{
 
 
 .logo span{
-    color: cyan;
+    color: black;
 }
 
 
@@ -92,7 +92,7 @@ body{
 
 
 .nav-links a:hover{
-    color: aqua;
+    color: black;
 }
 
 
@@ -104,6 +104,17 @@ body{
 
 .nav-links a.active{
     color: aqua;
+}
+
+
+
+/* ========= HERO SECTION =========*/
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
 }
 
 
@@ -135,7 +146,7 @@ body{
 
 .hero-content h2{
     font-size: 2rem;
-    color: #fff;
+    color: rgb(24, 22, 22);
     margin-bottom: 20px;
 }
 
@@ -186,8 +197,80 @@ body{
 .typing-text{
     margin-top: 25px;
     font-size: 24px;
-    color: #2563EB;
+    color: white;
     font-weight: 600;
     height: 35px;
 }
+
+
+
+/* =========== ABOUT SECTION ========== */
+.about{
+    padding: 100px;
+}
+
+
+
+.section-title{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: black;
+}
+
+
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+.about-image{
+    flex: 1;
+    text-align: center;
+}
+
+
+.about-image img{
+    width: 320px;
+    border-radius: 20px;
+}
+
+
+.about-content{
+    flex: 1;
+}
+
+
+.about-content p{
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.about-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+.about-info div{
+    background: #111827;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+
+
+.about-info div:hover{
+    background: blanchedalmond;
+}
+
 
