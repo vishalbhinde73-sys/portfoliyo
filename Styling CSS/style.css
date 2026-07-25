@@ -154,7 +154,7 @@ body{
 
 .hero-description{
     font-size: 1.1rem;
-    color: aliceblue;
+    color: rgba(8, 1, 1, 0.1);
     line-height: 1.7;
     margin-bottom: 35px;
 }
@@ -172,7 +172,7 @@ body{
 
 .btn-secondry{
     border:2px solid #3B82F6;
-    color: white;
+    color: rgba(237, 229, 229, 0.1);
 }
 
 
@@ -197,7 +197,7 @@ body{
 .typing-text{
     margin-top: 25px;
     font-size: 24px;
-    color: white;
+    color: rgba(237, 229, 229, 0.1);
     font-weight: 600;
     height: 35px;
 }
@@ -359,7 +359,8 @@ body{
 
 .skill-card:hover{
     background: bisque;
-    trans
+    transform: translate(-8px);
+    box-shadow: 0 15px 30px darkturquoise;
 }
 
 .skills-buttos a{
@@ -379,6 +380,22 @@ body{
     background: rgba(237, 229, 229, 0.1);
     color: white;
 }
+
+
+.project-card{
+    position: relative;
+    background: rgba(237, 229, 229, 0.1);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(237, 229, 229, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: .45s;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+
+
 
 
 .project-cards:hover {
@@ -422,6 +439,78 @@ body{
     transform: scale(0);
     animation: ripple 06s linear;
     background: rgba(255,255,255,5);
-
-
 }
+
+
+
+/* ======== PROJECT SECTION ========*/
+
+projects{
+    position: relative;
+    padding: 120px 8%;
+    background: black;
+    overflow: hidden;
+}
+
+
+.projects::before{
+    content:"";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: -220px;
+    left: -220px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(99,102,241,.28), transparent 70%);
+    filter: blur(80px);
+}
+
+
+.project::after{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -180px;
+    bottom: -250px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(139,92,246,.25) transparent 70%);
+    filter: blur(90px);
+}
+
+
+
+
+
+/* ========== TITLES ========*/
+
+.section-title{
+    text-align: center;
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -.5px;
+}
+
+
+
+.section-subtitle{
+    text-align: center;
+    color: #9aa3b2;
+    font-size: 18px;
+    margin-bottom: 70px;    
+}
+
+
+
+/* ==== GRID ====*/
+.projects-grid{
+    position:relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fix,minmax(360px,1fr));
+    gap: 40px;
+}
+
+
