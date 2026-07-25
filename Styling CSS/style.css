@@ -290,4 +290,138 @@ body{
 }
 
 
-.skills-conta
+.skills-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 60px;
+}
+
+
+.skills-bars{
+    flex: 1;
+}
+
+
+.skill{
+    margin-bottom: 30px;
+}
+
+
+.skills-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.progress-bars{
+    width: 0;
+    height: 100%;
+    background: rgba(36, 30, 30, 0);
+    border-radius: 20px;
+    transition: width 1.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(36, 30, 30, 0);
+}
+
+
+.progress{
+    width: 0;
+    height: 100%;
+    background: #3B82F6;
+    border-radius: 20px;
+    transition: width 1.5s ease-in-out;
+    box-shadow: 0 0 10px #3B82F6;
+}
+
+
+/* ========= SKILL CARDS ========= */
+.skill-grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+
+.skill-card{
+    background:rgb(18, 18, 7);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid rgba(237, 229, 229, 0.1);
+}
+
+
+.skill-card:hover{
+    background: bisque;
+    trans
+}
+
+.skills-buttos a{
+    display: inline-block;
+    padding: 10px 16px;
+    margin-right: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid rgba(237, 229, 229, 0.1);
+    color: rgba(237, 229, 229, 0.1);
+}
+
+
+
+.project-buttons a:hover{
+    background: rgba(237, 229, 229, 0.1);
+    color: white;
+}
+
+
+.project-cards:hover {
+    transform: translate(-8px);
+    box-shadow: 0 10px 25px white;
+}
+
+
+.project-badge{
+    background: gold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.project-card{
+    opacity: 0;
+    transform: translate(80px);
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+
+.show-project{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.project-buttons a{
+    overflow:hidden;
+    position: relative;
+}
+
+
+.ripple{
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 06s linear;
+    background: rgba(255,255,255,5);
+
+
+}
