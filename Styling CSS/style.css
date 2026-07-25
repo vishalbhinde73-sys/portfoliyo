@@ -96,12 +96,6 @@ body{
 }
 
 
-.nav-links a.hover::after,
-.nav-links a.active::after{
-    width:100%;
-}
-
-
 .nav-links a.active{
     color: aqua;
 }
@@ -123,6 +117,9 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 
@@ -133,7 +130,7 @@ body{
 
 .hero-greeting{
     font-size: 1.5rem;
-    color: aqua;
+    color: #111;
     margin-bottom: 15px;
 }
 
@@ -141,12 +138,17 @@ body{
 .hero-content h1{
     font-size: 5rem;
     margin-bottom: 15px;
+    color: #111;
 }
+
+
+
+
 
 
 .hero-content h2{
     font-size: 2rem;
-    color: rgb(24, 22, 22);
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -154,7 +156,7 @@ body{
 
 .hero-description{
     font-size: 1.1rem;
-    color: rgba(8, 1, 1, 0.1);
+    color: black;
     line-height: 1.7;
     margin-bottom: 35px;
 }
@@ -166,12 +168,12 @@ body{
 }
 
 .btn-primary{
-    background: #2563EB;
+    background: black;
 }
 
 
 .btn-secondry{
-    border:2px solid #3B82F6;
+    border:2px solid rgba(237, 229, 229, 0.1);
     color: rgba(237, 229, 229, 0.1);
 }
 
