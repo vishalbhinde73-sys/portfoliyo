@@ -143,51 +143,106 @@ body{
 
 
 
-
-
-
-.hero-content h2{
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 20px;
+.hero-content h1 span{
+    color: #0f766e;
 }
 
 
 
 .hero-description{
     font-size: 1.1rem;
-    color: black;
+    color: #111;
     line-height: 1.7;
-    margin-bottom: 35px;
+    margin: 35px;
 }
+
+
+
+.typing-text{
+    margin-top: 25px;
+    font-size: 24px;
+    color: #0f766e;
+    font-weight: 600;
+    height: 35px;
+}
+
 
 
 .hero-buttons{
     display: flex;
     gap: 20px;
-}
-
-.btn-primary{
-    background: black;
+    flex-wrap: wrap;
 }
 
 
-.btn-secondry{
-    border:2px solid rgba(237, 229, 229, 0.1);
-    color: rgba(237, 229, 229, 0.1);
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.footer-btn,
+.cert-btn,
+.resume-btn,
+.send-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
 }
 
 
-.btn-secondry:hover{
-    background: #3B82F6;
+
+.btn.primary,
+.btn-primary,
+.footer-btn.primary,
+.send-btn{
+    background:#111;
+    color: #fff;
 }
+
+
+
+.btn.secondary,
+.btn-secondary,
+.footer-btn.secondary,
+.resume-btn,
+.cert-btn{
+    background: transparent;
+    color: #111;
+    border: 2px solid #111;
+}
+
+
+
+.btn.primary:hover,
+.btn-primary:hover,
+.footer-btn.primary:hover,
+.send-btn:hover{
+    background: #0f766e;
+    color: #fff;
+}
+
+
+
+.btn.secondary:hover,
+.btn-secondary:hover,
+.footer-btn:hover,
+.cert-btn:hover{
+    background: #111;
+    color: #fff;
+}
+
 
 
 .hero-image{
-    flex:1;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
+
 
 
 .hero-image img{
@@ -196,19 +251,10 @@ body{
 }
 
 
-.typing-text{
-    margin-top: 25px;
-    font-size: 24px;
-    color: rgba(237, 229, 229, 0.1);
-    font-weight: 600;
-    height: 35px;
-}
-
-
 
 /* =========== ABOUT SECTION ========== */
 .about{
-    padding: 100px;
+    padding: 100px 0;
 }
 
 
