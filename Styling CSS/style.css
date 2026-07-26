@@ -676,3 +676,21 @@ body{
 
 
 
+/* ============ EDUCATION SECTION ==========*/
+
+.education,
+.certifications,
+.contact{
+    padding: 100px 0;
+}
+
+
+
+.timeline{
+    display: grid;
+    gap: 25px;
+}
+
+
+
+.ti
