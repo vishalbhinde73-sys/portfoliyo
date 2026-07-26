@@ -693,4 +693,140 @@ body{
 
 
 
-.ti
+.timeline-item{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+
+.timeline-dot{
+    width: 16px;
+    height: 16px;
+    background: #3B82F6;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+
+
+.timeline-content{
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+
+
+.timeline-year{
+    display: inline-block;
+    font-weight: 600;
+    color: #3B82F6;
+    margin-bottom: 8px;
+}
+
+
+
+.timeline-content h3,
+.timeline-content h4,
+.timeline-content p{
+    color: #111;
+    margin-bottom: 6px;
+}
+
+
+
+/* ================= CERTIFICATIONS ==============*/
+.cert-heading,
+.contact-heading,
+.education-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+.cert-tag,
+.cantact-tag,
+.contact-tag{
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.12);
+    color: #3B82F6;
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+
+.cert-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+
+.cert-card{
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+.cert-card.featured{
+    border: 2px solid #3B82F6;
+}
+
+
+
+.cert-icon{
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+
+
+.issuer{
+    display: inline-block;
+    color: #3B82F6;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+.cert-card h3{
+    color: #111;
+    margin-bottom: 110px;
+}
+
+
+
+.cert-card p,
+.cert-date{
+    color: #555;
+    margin-bottom: 12px;
+}
+
+
+
+.cert-actions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+
+.cert-actions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
