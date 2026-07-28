@@ -108,6 +108,7 @@ body{
     display: flex;
     align-items: center;
     padding-top: 80px;
+    background: #f8fafc;
 }
 
 
@@ -118,7 +119,7 @@ body{
     gap: 60px;
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
@@ -135,9 +136,10 @@ body{
 
 
 .hero-content h1{
-    font-size: 5rem;
-    margin-bottom: 15px;
+    font-size: 3.8rem;
+    margin-bottom: 10px;
     color: #111;
+    line-height: 1.15;
 }
 
 
@@ -149,17 +151,18 @@ body{
 
 
 .hero-description{
-    font-size: 1.1rem;
-    color: #111;
+    font-size: 1.15rem;
+    color: #444;
     line-height: 1.7;
-    margin: 35px;
+    margin: 25px 0;
+    max-width: 540px;
 }
 
 
 
 .typing-text{
-    margin-top: 25px;
-    font-size: 24px;
+    margin: 20px 0 30px;
+    font-size: 1.4rem;
     color: #0f766e;
     font-weight: 600;
     height: 35px;
@@ -228,8 +231,9 @@ body{
 
 .btn.secondary:hover,
 .btn-secondary:hover,
-.footer-btn:hover,
-.cert-btn:hover{
+.footer-btn.secondry:hover,
+.cert-btn:hover
+.resume-btn:hover{
     background: #111;
     color: #fff;
 }
@@ -260,6 +264,7 @@ body{
 
 .about .container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
@@ -269,9 +274,10 @@ body{
 .about-container{
     flex-basis: 100%;
     text-align: center;
-    font-size: 42px;
+    font-size: 2.6rem;
     margin-bottom: 40px;
-    color: black;
+    color: #111;
+    font-weight: 700;
 }
 
 
@@ -286,6 +292,7 @@ body{
     width: 320px;
     max-width: 100%;
     border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -298,12 +305,13 @@ body{
 .about-content h3{
     margin-bottom: 20px;
     color: #111;
+    font-size: 1.6rem;
 }
 
 
 
 .about-content p{
-    color: black;
+    color: #444;
     line-height: 1.8;
     margin-bottom: 20px;
 }
@@ -324,14 +332,16 @@ body{
     color: #fff;
     padding: 15px;
     border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 
 
 .about-info div:hover{
-    background: blanchedalmond;
-    color: #111;
+    background: #0f766e;
+    transform: translateY(-4px);
 }
 
 
@@ -339,36 +349,47 @@ body{
 /* =========== SKILLS SECTION ========*/
 .skills{
     padding: 100px 0;
+    background: #fff;
 }
 
-
+.skills .container > h2,
 .skills .section-title{
     text-align: center;
-    font-size: 52px;
+    font-size: 2.6rem;
     font-weight: 700;
     color: #111;
-    margin-bottom: 15px;
-    letter-spacing: -0.5;
+    margin-bottom: 12px;
 }
 
 
 
-.section-subtitle{
+.section-subtitle,
+.skilld .section-title + p{
     text-align: center;
     color: #555;
-    margin-top: 0;
-    margin-bottom: 60px;
-    font-size: 18px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 
 .skills-container{
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 800px;
+    margin: 0 auto 60px;
 }
+
+
+
+.skill{
+    width: 100%;
+}
+
 
 
 .skills-bars{
@@ -391,7 +412,7 @@ body{
 .progress-bar{
     width: 100%;
     height: 12px;
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -400,10 +421,9 @@ body{
 
 .progress{
     height: 100%;
-    background: #3B82F6;
+    background: linear-gradient(90deg, #3B82F6, #0f766e);
     border-radius: 20px;
     transition: width 1.5s ease-in-out;
-    box-shadow: 0 0 10px #3B82F6;
 }
 
 
@@ -420,33 +440,32 @@ body{
 
 /* ============= SKILL CARDS =============*/
 .skills-grid{
-    margin-top: 50px;
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
 }
 
 
 
 .skill-card{
-    background: rgba(18, 18, 7);
+    background: #111827;
     color: #fff;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 22px 15px;
+    border-radius: 14px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     transition: 0.3s;
-    border: 1px solid rgba(237, 229, 229, 0.1);
+    border: 1px solid transparent;
 }
 
 
 
 .skill-card:hover{
-    background: bisque;
-    color: #111;
-    transition: translate(-8px);
-    box-shadow: 0 15px 30px darkturquoise;
+    background: #0f766e;
+    transition: translate(-6px);
+    box-shadow: 0 12px 25px rgba(15, 118, 110, 0.3);
 }
 
 
