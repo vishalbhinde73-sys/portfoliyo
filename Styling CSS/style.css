@@ -837,26 +837,29 @@ body{
 }
 
 /* ================= CERTIFICATIONS ==============*/
-.cert-heading,
-.contact-heading,
-.education-heading{
+.certifications{
+    padding: 100px 0;
+    background: #fff;
+}
+
+
+.cert-heading{
     text-align: center;
     margin-bottom: 50px;
 }
 
 
-
-.cert-tag,
-.cantact-tag,
-.contact-tag{
+.cert-tag{
     display: inline-block;
     background: rgba(59, 130, 246, 0.12);
-    color: #3B82F6;
-    padding: 8px 14px;
+    color: #3b82f6;
+    padding: 8px 16px;
     border-radius: 999px;
     margin-bottom: 14px;
     font-weight: 600;
+    font-size: 0.9rem;
 }
+
 
 
 .cert-grid{
@@ -866,12 +869,23 @@ body{
 }
 
 
+
 .cert-card{
     background: #fff;
-    padding: 24px;
+    padding: 28px 24px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.cert-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -881,9 +895,8 @@ body{
 }
 
 
-
 .cert-icon{
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 14px;
 }
 
@@ -894,40 +907,42 @@ body{
     color: #3B82F6;
     font-weight: 600;
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 
 
 .cert-card h3{
     color: #111;
-    margin-bottom: 110px;
-}
-
-
-
-.cert-card p,
-.cert-date{
-    color: #555;
     margin-bottom: 12px;
+    font-size: 1.2rem;
 }
 
 
 
-.cert-actions{
+.cert-card p{
+    color: #555;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+
+
+.cert-date{
+    color: #64748b;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+}
+
+
+
+.cert-actions,
+.cer-actions{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
-
-
-
-.cert-actions{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-
 /* ============= CONTACT SEDTION ========== */
 
 
