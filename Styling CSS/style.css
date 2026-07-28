@@ -713,25 +713,66 @@ body{
 
 /* ============ EDUCATION SECTION ==========*/
 
-.education,
-.certifications,
-.contact{
+.education{
     padding: 100px 0;
+    background: #f8fafc;
 }
 
+
+.education-heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+.education-tag{
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.12);
+    color: #3B82F6;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
 
 
 .timeline{
     display: grid;
-    gap: 25px;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
 }
 
 
 
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+
 .timeline-item{
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: flex-start;
+    position: relative;
 }
 
 
@@ -743,16 +784,25 @@ body{
     border-radius: 50%;
     margin-top: 8px;
     flex-shrink: 0;
+    z-index: 1;
+    box-shadow: 0 0 0 4px #f8fafc;
 }
 
 
 
 .timeline-content{
     background: #fff;
-    padding: 20px;
+    padding: 22px 25px;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
     width: 100%;
+    transition: 0.3s;
+}
+
+
+.timeline-content:hover{
+    transform: translateY(6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -760,20 +810,31 @@ body{
 .timeline-year{
     display: inline-block;
     font-weight: 600;
-    color: #3B82F6;
+    color: #3b82f6;
     margin-bottom: 8px;
+    font-size: 0.9rem;
 }
 
 
 
-.timeline-content h3,
-.timeline-content h4,
-.timeline-content p{
+.timeline-content h3{
     color: #111;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+    font-size: 1.25rem;
 }
 
 
+.timeline-content h4{
+    color: #0f766e;
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+
+.timelime-content p{
+    color: #555;
+    font-size: 0.95rem;
+}
 
 /* ================= CERTIFICATIONS ==============*/
 .cert-heading,
