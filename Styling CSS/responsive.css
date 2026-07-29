@@ -77,3 +77,27 @@
         text-align: center;
     }
 }
+
+
+
+
+@media(max-width: 480px){
+    .hero-content h1{
+        font-size: 2rem;
+    }
+
+
+    .about-info{
+        grid-template-columns: 1fr;
+    }
+
+
+    .skills-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .section-title{
+        font-size: 2rem;
+    }
+}
