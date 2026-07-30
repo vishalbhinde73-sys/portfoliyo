@@ -1142,6 +1142,12 @@ body{
 
 
 
+.footer-right a:hover{
+    color: #0f766e;
+}
+
+
+
 .footer-bottom{
     display: flex;
     justify-content: space-between;
@@ -1153,6 +1159,41 @@ body{
 }
 
 
+
+
+#backToTop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0f766e;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+    box-shadow: 0 8px 30px rgba(15, 118, 110, 0.4);
+}
+
+
+
+#boackToTop.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+#backToTop:hover{
+    background: #0d9488;
+    transform: translateY(-4px);
+}
 
 
 
