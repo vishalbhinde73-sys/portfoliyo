@@ -1245,3 +1245,16 @@ body{
     gap: 28px;
 }
 
+.nav-right a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6b6b6b;
+    transition: color 0.2s ease;
+}
+
+
+
+.nav-right a:hover{
+    color: #1a1a1a;
+}
