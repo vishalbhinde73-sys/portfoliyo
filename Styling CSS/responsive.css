@@ -78,7 +78,7 @@
 
 
 
-
+/* Mobile Landscope / Large Phones */
 @media(max-width: 768px){
     .menu-toggle{
         display: block;
@@ -95,27 +95,74 @@
         padding: 30px 0;
         gap: 20px;
         display: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)
     }
 
     .nav-links.active{
         display: flex;
     }
 
+    .hero{
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
     .hero-content h1{
         font-size: 2.4rem;
     }
 
-    .projects-grid{
-        grid-template-columns: 1fr;
+    .hero-greeting{
+        font-size: 1.3rem;
+    }
+
+    .typing-text{
+        font-size: 1.2rem;
+    }
+
+    .btn,
+    .btn-primary,
+    .btn-secondry{
+        padding: 11px 18px;
+        font-size: 0.95rem;
+    }
+
+    .about-container,
+    .skills .container > h2,
+    .section-title{
+        font-size: 2.2rem;
+    }
+
+    .about-image img{
+        width: 260px;
     }
 
     .skills-grid{
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
 
+    .skill-card{
+        padding: 18px 12px;
+        font-size: 0.95rem;
+    }
+
+    .projects{
+        padding: 80px 0;
+    }
+
+
+    .cert-grid{
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    
     .footer-content{
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .footer-right{
@@ -125,6 +172,18 @@
     .footer-bottom{
         flex-direction: column;
         text-align: center;
+        gap: 8px;
+    }
+
+    .footer-cta h2{
+        font-size: 1.8rem;
+    }
+
+    #backToTop{
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
     }
 }
 
