@@ -1,214 +1,192 @@
-/* Large Tablets / Small Laptop */
-@media(max-width: 1200px)
-{
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
 
-    .hero-content h1{
-        font-size: 3.2rem;
-    }
-
-    .projects-grid{
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 28px;
-    }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
 }
 
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
 
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
 
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-/* Teblets (potrait & Landscape */ 
-@media (max-width: 992px){
-    .hero-container{
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
+  .hero-buttons {
+    justify-content: center;
+  }
 
-    .hero-content h1{
-        font-size: 2.8rem;
-    }
+  .hero-image img {
+    width: 280px;
+  }
 
-    .hero-description{
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .hero-buttons{
-        justify-content: center;
-    }
+  .about-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .hero-image img{
-        width: 280px;
-    }
+  .contact-wrapper {
+    flex-direction: column;
+  }
 
-    .about .container{
-        flex-direction: column;
-        text-align: center;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
 
-    .about-info{
-        grid-template-columns: 1fr 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .project-image img {
+    height: 260px;
+  }
 
-    .contact-wrapper{
-        flex-direction: column;
-    }
+  .skills-container {
+    max-width: 100%;
+  }
 
-    .projects-grid{
-        grid-template-columns: 1fr;
-        max-width: 600px;
-    }
-
-    .project-image img{
-        height: 260px;
-    }
-
-    .skills-container{
-        max-width: 100%;
-    }
-
-    .timeline{
-        max-width: 100%;
-    }
+  .timeline {
+    max-width: 100%;
+  }
 }
 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(73, 145, 153, 0.98);
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
 
+  .nav-links.active {
+    display: flex;
+  }
 
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
 
-/* Mobile Landscope / Large Phones */
-@media(max-width: 768px){
-    .menu-toggle{
-        display: block;
-    }
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
 
-    .nav-links{
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: rgba(73, 145, 153);
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 0;
-        gap: 20px;
-        display: none;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)
-    }
+  .hero-greeting {
+    font-size: 1.3rem;
+  }
 
-    .nav-links.active{
-        display: flex;
-    }
+  .typing-text {
+    font-size: 1.2rem;
+  }
 
-    .hero{
-        padding-top: 100px;
-        min-height: auto;
-        padding-bottom: 60px;
-    }
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    padding: 11px 18px;
+    font-size: 0.95rem;
+  }
 
-    .hero-content h1{
-        font-size: 2.4rem;
-    }
+  .about-container,
+  .skills .container > h2,
+  .section-title {
+    font-size: 2.2rem;
+  }
 
-    .hero-greeting{
-        font-size: 1.3rem;
-    }
+  .about-image img {
+    width: 260px;
+  }
 
-    .typing-text{
-        font-size: 1.2rem;
-    }
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
 
-    .btn,
-    .btn-primary,
-    .btn-secondry{
-        padding: 11px 18px;
-        font-size: 0.95rem;
-    }
+  .skill-card {
+    padding: 18px 12px;
+    font-size: 0.95rem;
+  }
 
-    .about-container,
-    .skills .container > h2,
-    .section-title{
-        font-size: 2.2rem;
-    }
+  .projects {
+    padding: 80px 0;
+  }
 
-    .about-image img{
-        width: 260px;
-    }
+  .cert-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
 
-    .skills-grid{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
-    .skill-card{
-        padding: 18px 12px;
-        font-size: 0.95rem;
-    }
+  .footer-right {
+    justify-content: center;
+  }
 
-    .projects{
-        padding: 80px 0;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 
+  .footer-cta h2 {
+    font-size: 1.8rem;
+  }
 
-    .cert-grid{
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        margin: 0 auto;
-    }
-
-    
-    .footer-content{
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .footer-right{
-        justify-content: center;
-    }
-
-    .footer-bottom{
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-    }
-
-    .footer-cta h2{
-        font-size: 1.8rem;
-    }
-
-    #backToTop{
-        bottom: 20px;
-        right: 20px;
-        width: 44px;
-        height: 44px;
-    }
+  #backToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
 }
 
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
+  .about-info {
+    grid-template-columns: 1fr;
+  }
 
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-
-
-@media(max-width: 480px){
-    .hero-content h1{
-        font-size: 2rem;
-    }
-
-
-    .about-info{
-        grid-template-columns: 1fr;
-    }
-
-
-    .skills-grid{
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .section-title{
-        font-size: 2rem;
-    }
+  .section-title {
+    font-size: 2rem;
+  }
 }
