@@ -15,6 +15,12 @@ body {
   background: whitesmoke;
   color: #111;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .container {
@@ -39,11 +45,18 @@ body {
   align-items: center;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .menu-toggle {
   display: none;
   font-size: 30px;
   color: white;
   cursor: pointer;
+  line-height: 1;
 }
 
 .logo {
@@ -1071,6 +1084,53 @@ body {
 .send-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 14px 28px rgba(59, 200, 255, 0.35);
+}
+
+@media (max-width: 992px) {
+  .contact-panel {
+    flex-direction: column;
+    padding: 20px 18px;
+  }
+
+  .contact-info,
+  .contact-form-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-panel {
+    width: 92%;
+    padding: 14px 12px;
+  }
+
+  .contact-info {
+    padding: 12px 8px 8px;
+  }
+
+  .contact-form-card {
+    padding: 12px 4px 8px;
+  }
+
+  .info-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .section-title {
+    font-size: 2.2rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 14px 16px;
+  }
+
+  .send-btn {
+    min-height: 52px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =========== FOOTER ========== */
