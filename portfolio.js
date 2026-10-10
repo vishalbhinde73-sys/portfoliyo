@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
+
   const navLinks = document.getElementById("nav-links");
+
   const navItems = document.querySelectorAll(".nav-link");
+
   const backToTopButton = document.getElementById("backToTop");
+
   const contactForm = document.getElementById("contact-form");
 
   if (menuToggle && navLinks) {
@@ -13,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     navItems.forEach((item) => {
       item.addEventListener("click", () => {
         navLinks.classList.remove("active");
+
         navItems.forEach((navItem) => navItem.classList.remove("active"));
+
         item.classList.add("active");
       });
     });
@@ -25,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", toggleBackToTopButton);
+
     toggleBackToTopButton();
 
     backToTopButton.addEventListener("click", () => {
@@ -43,18 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!window.emailjs) {
       alert("EmailJS is not available right now.");
+
       return;
     }
 
     emailjs
+
       .sendForm("service_dynw9un", "template_0vjaplg", contactForm)
+
       .then(() => {
         alert("Message successfully sent to your email!");
+
         contactForm.reset();
       })
+
       .catch((error) => {
         console.error("Email send failed:", error);
-        alert("Failed to send message. Please check your EmailJS configuration.");
+
+        alert(
+          "Failed to send message. Please check your EmailJS configuration.",
+        );
       });
   });
 });
