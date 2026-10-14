@@ -566,22 +566,6 @@ h1 span,
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
-.about-photo {
-  grid-column: span 2;
-  min-height: calc(var(--space-2xl) * 13);
-  border-radius: var(--corner-lg);
-  padding: var(--space-sm);
-  overflow: hidden;
-}
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 32%;
-  border-radius: var(--corner-md);
-  box-shadow: inset 0 var(--space-sm) var(--space-lg)
-    color-mix(in srgb, var(--brand-dark) 18%, transparent);
-}
 .about-stack .mini-card:last-child {
   grid-column: span 2;
 }
@@ -1282,7 +1266,6 @@ footer > div {
   .form-row {
     grid-template-columns: 1fr;
   }
-  .about-photo,
   .about-stack .mini-card:last-child {
     grid-column: auto;
   }

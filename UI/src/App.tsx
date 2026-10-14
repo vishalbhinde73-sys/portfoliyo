@@ -189,7 +189,7 @@ const projects = [
 
     live: "",
 
-    media: assetPath("images/railway_reservation.png"),
+    media: assetPath("images/railway_reservation.webp"),
 
     icon: "terminal" as IconName,
 
@@ -223,7 +223,7 @@ const projects = [
 
     live: "",
 
-    media: assetPath("images/hospital_management_system.png"),
+    media: assetPath("images/hospital_management_system.webp"),
 
     icon: "database" as IconName,
 
@@ -257,7 +257,7 @@ const projects = [
 
     live: "https://vishalbhinde73-sys.github.io/portfoliyo/",
 
-    media: assetPath("images/portfoliyo.png"),
+    media: assetPath("images/portfoliyo.webp"),
 
     icon: "layers" as IconName,
 
@@ -599,8 +599,10 @@ export default function App() {
           <div className="hero-visual">
             <div className="portrait-frame glass">
               <img
-                src={assetPath("images/profile.png")}
+                src={assetPath("images/profile.webp")}
                 alt="Vishal Bhinde, software developer"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="image-wash" />
               <div className="portrait-caption glass">
@@ -653,12 +655,6 @@ export default function App() {
               </div>
             </div>
             <div className="about-stack">
-              <div className="about-photo glass">
-                <img
-                  src={assetPath("images/profile.png")}
-                  alt="Portrait of Vishal Bhinde"
-                />
-              </div>
               <div className="mini-card glass">
                 <Icon name="terminal" size={25} />
                 <span>Core development</span>
@@ -734,13 +730,18 @@ export default function App() {
                       src={project.media}
                       muted
                       loop
-                      autoPlay
                       playsInline
                       controls
+                      preload="none"
                       aria-label={`${project.title} demonstration`}
                     />
                   ) : (
-                    <img src={project.media} alt={`${project.title} preview`} />
+                    <img
+                      src={project.media}
+                      alt={`${project.title} preview`}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   )}
                   <span className="project-number">{project.number}</span>
                   <div className="project-icon">
@@ -824,8 +825,10 @@ export default function App() {
             </div>
             <div className="college-card glass">
               <img
-                src={assetPath("images/Holkar science collage.jpg")}
+                src={assetPath("images/Holkar science collage.webp")}
                 alt="Government Holkar Model Autonomous Science College"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <span className="eyebrow">Current chapter</span>
