@@ -24,6 +24,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 4px;
+}
 
 .site-shell {
   position: relative;
@@ -596,51 +601,34 @@ h1 span,
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2xl) calc(var(--space-2xl) * 3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+.skill {
+  min-width: 0;
+  padding: var(--space-xl);
+  border: 1px solid color-mix(in srgb, var(--border-primary) 72%, transparent);
+  border-radius: var(--corner-lg);
+  background: color-mix(in srgb, var(--surface-bg) 30%, transparent);
 }
 .skill-label {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  min-height: calc(var(--space-2xl) * 2);
+  color: var(--text-primary);
   font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
   margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
 }
-.skill-label strong {
-  color: var(--brand-primary);
-  font-size: var(--text-xs);
+.skill .tags {
+  margin: 0;
 }
-.skill-track {
-  height: var(--space-md);
-  padding: var(--space-xs);
-  background: var(--bg-faint);
-  border-radius: var(--corner-full);
-  box-shadow:
-    inset 0 var(--space-xs) var(--space-sm)
-      color-mix(in srgb, var(--brand-dark) 22%, transparent),
-    0 1px 0 var(--color-white);
-  overflow: hidden;
+.skill .tags span {
+  line-height: 1.4;
 }
-.skill-track span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--brand-primary) 70%, var(--color-white)),
-    var(--brand-primary)
-  );
-  box-shadow: inset 0 1px 0
-    color-mix(in srgb, var(--color-white) 55%, transparent);
-}
-.tech-cloud {
-  border-top: 1px solid var(--border-primary);
-  margin-top: calc(var(--space-2xl) * 3);
-  padding-top: var(--space-xl);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-.tech-cloud span,
 .tags span {
   color: var(--text-secondary);
   background: linear-gradient(180deg, var(--surface-bg), var(--bg-subtle));
@@ -1101,7 +1089,6 @@ footer > div {
 .button.secondary,
 .code-icon,
 .project-icon,
-.tech-cloud span,
 .tags span,
 .timeline-marker,
 .project-link,
@@ -1208,6 +1195,9 @@ footer > div {
     padding-top: calc(var(--space-2xl) * 8);
     gap: calc(var(--space-2xl) * 4);
   }
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .hero-visual {
     justify-self: center;
     max-width: calc(var(--container-3xl) - var(--space-2xl) * 10);
@@ -1260,11 +1250,16 @@ footer > div {
     padding: var(--space-xl);
   }
   .about-stack,
-  .skills-grid,
   .project-grid,
   .cert-grid,
   .form-row {
     grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill {
+    padding: var(--space-lg);
   }
   .about-stack .mini-card:last-child {
     grid-column: auto;

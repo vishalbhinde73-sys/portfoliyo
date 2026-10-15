@@ -147,18 +147,19 @@ function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
   );
 }
 
-const skills = [
-  { name: "C Programming", level: 98 },
-
-  { name: "C++", level: 90 },
-
-  { name: "HTML & CSS", level: 92 },
-
-  { name: "JavaScript", level: 90 },
-
-  { name: "OOP Concepts", level: 82 },
-
-  { name: "Git & GitHub", level: 95 },
+const skillGroups = [
+  {
+    name: "Programming languages",
+    technologies: ["C", "C++", "Java", "JavaScript", "TypeScript"],
+  },
+  {
+    name: "Web development",
+    technologies: ["HTML5", "CSS3", "React", "Tailwind CSS", "Vite"],
+  },
+  {
+    name: "Tools & concepts",
+    technologies: ["Git", "GitHub", "VS Code", "OOP", "File handling"],
+  },
 ];
 
 const projects = [
@@ -183,7 +184,9 @@ const projects = [
 
     status: "Completed",
 
-    year: "C",
+    metaLabel: "Language",
+
+    metaValue: "C",
 
     github: "https://github.com/vishalbhinde73-sys/C-Programing-Project-",
 
@@ -217,7 +220,9 @@ const projects = [
 
     status: "Completed",
 
-    year: "C++",
+    metaLabel: "Language",
+
+    metaValue: "C++",
 
     github: "https://github.com/vishalbhinde73-sys/CPP-project",
 
@@ -238,20 +243,22 @@ const projects = [
     title: "Personal Portfolio Website",
 
     description:
-      "A responsive developer portfolio built with modern layouts, smooth interactions, dark mode and focused storytelling.",
+      "A responsive developer portfolio built with React, TypeScript and Tailwind CSS to present projects, skills and contact information.",
 
-    tags: ["HTML5", "CSS3", "JavaScript"],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
 
     features: [
       "Responsive Design",
-      "Dark Theme",
-      "Smooth Animation",
-      "Modern Layout",
+      "Project Showcase",
+      "Contact Form",
+      "Certificate Links",
     ],
 
     status: "Live",
 
-    year: "2026",
+    metaLabel: "Year",
+
+    metaValue: "2026",
 
     github: "https://github.com/vishalbhinde73-sys/portfoliyo",
 
@@ -285,7 +292,9 @@ const projects = [
 
     status: "In Progress",
 
-    year: "2026",
+    metaLabel: "Year",
+
+    metaValue: "2026",
 
     github: "",
 
@@ -682,31 +691,17 @@ export default function App() {
           />
           <div className="skills-panel glass">
             <div className="skills-grid">
-              {skills.map((skill) => (
-                <div className="skill" key={skill.name}>
+              {skillGroups.map((group) => (
+                <div className="skill" key={group.name}>
                   <div className="skill-label">
-                    <span>{skill.name}</span>
-                    <strong>{skill.level}%</strong>
+                    <span>{group.name}</span>
                   </div>
-                  <div className="skill-track">
-                    <span style={{ width: `${skill.level}%` }} />
+                  <div className="tags">
+                    {group.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="tech-cloud">
-              {[
-                "C",
-                "C++",
-                "JavaScript",
-                "OOP",
-                "HTML5",
-                "CSS3",
-                "Git",
-                "GitHub",
-                "VS Code",
-              ].map((tech) => (
-                <span key={tech}>{tech}</span>
               ))}
             </div>
           </div>
@@ -767,36 +762,34 @@ export default function App() {
                     {project.status}
                   </span>
                   <span>
-                    <small>
-                      {project.number === "01" || project.number === "02"
-                        ? "Language"
-                        : "Year"}
-                    </small>
-                    {project.year}
+                    <small>{project.metaLabel}</small>
+                    {project.metaValue}
                   </span>
                 </div>
-                <div className="project-actions">
-                  {project.github && (
-                    <a
-                      className="project-link"
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub <Icon name="github" size={17} />
-                    </a>
-                  )}
-                  {project.live && (
-                    <a
-                      className="project-link"
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Live demo <Icon name="external" size={17} />
-                    </a>
-                  )}
-                </div>
+                {(project.github || project.live) && (
+                  <div className="project-actions">
+                    {project.github && (
+                      <a
+                        className="project-link"
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub <Icon name="github" size={17} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        className="project-link"
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Live demo <Icon name="external" size={17} />
+                      </a>
+                    )}
+                  </div>
+                )}
               </article>
             ))}
           </div>
@@ -1015,6 +1008,7 @@ export default function App() {
             href="https://github.com/vishalbhinde73-sys"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
           >
             <Icon name="github" />
           </a>
@@ -1022,6 +1016,7 @@ export default function App() {
             href="https://www.linkedin.com/in/vishal-bhinde-41793232a"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
             <Icon name="linkedin" />
           </a>
