@@ -477,6 +477,55 @@ export default function App() {
     setTheme("light");
   }, [setTheme]);
 
+  useEffect(() => {
+    const noise = document.querySelector<HTMLElement>(".noise");
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    );
+
+    if (!noise || reduceMotion.matches) return;
+
+    let animationFrame = 0;
+    let pointerX = 50;
+    let pointerY = 50;
+
+    const updatePointer = (event: PointerEvent) => {
+      if (event.pointerType === "touch") return;
+
+      pointerX = (event.clientX / window.innerWidth) * 100;
+      pointerY = (event.clientY / window.innerHeight) * 100;
+
+      if (animationFrame) return;
+
+      animationFrame = window.requestAnimationFrame(() => {
+        const offsetX = ((pointerX - 50) / 50) * 28;
+        const offsetY = ((pointerY - 50) / 50) * 20;
+
+        noise.style.setProperty("--pointer-x", `${offsetX}px`);
+        noise.style.setProperty("--pointer-y", `${offsetY}px`);
+        noise.style.setProperty("--cursor-x", `${pointerX}%`);
+        noise.style.setProperty("--cursor-y", `${pointerY}%`);
+        animationFrame = 0;
+      });
+    };
+
+    const resetPointer = () => {
+      noise.style.setProperty("--pointer-x", "0px");
+      noise.style.setProperty("--pointer-y", "0px");
+      noise.style.setProperty("--cursor-x", "50%");
+      noise.style.setProperty("--cursor-y", "50%");
+    };
+
+    window.addEventListener("pointermove", updatePointer, { passive: true });
+    window.addEventListener("pointerleave", resetPointer);
+
+    return () => {
+      window.removeEventListener("pointermove", updatePointer);
+      window.removeEventListener("pointerleave", resetPointer);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
