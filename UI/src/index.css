@@ -99,20 +99,6 @@ button:focus-visible {
       color-mix(in srgb, var(--brand-primary) 72%, transparent) 1px,
       transparent 1.8px
     ),
-    repeating-linear-gradient(
-      48deg,
-      transparent 0,
-      transparent 38px,
-      color-mix(in srgb, var(--brand-secondary) 22%, transparent) 39px,
-      transparent 40px
-    ),
-    repeating-linear-gradient(
-      -48deg,
-      transparent 0,
-      transparent 38px,
-      color-mix(in srgb, var(--brand-primary) 20%, transparent) 39px,
-      transparent 40px
-    ),
     repeating-conic-gradient(
       from 220deg at 0% 0%,
       transparent 0deg 5deg,
@@ -128,17 +114,42 @@ button:focus-visible {
   background-size:
     112px 112px,
     100% 100%,
-    100% 100%,
-    100% 100%,
     100% 100%;
   background-position:
     0 0,
     center center,
-    center center,
-    center center,
     center center;
   opacity: 0.28;
   mask-image: radial-gradient(ellipse at 50% 42%, #000 4%, transparent 88%);
+}
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background-image:
+    repeating-linear-gradient(
+      48deg,
+      transparent 0,
+      transparent 38px,
+      color-mix(in srgb, var(--brand-secondary) 22%, transparent) 39px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      -48deg,
+      transparent 0,
+      transparent 38px,
+      color-mix(in srgb, var(--brand-primary) 20%, transparent) 39px,
+      transparent 40px
+    );
+  animation: mesh-drift 32s ease-in-out infinite alternate;
+}
+@keyframes mesh-drift {
+  from {
+    transform: translate3d(-18px, 12px, 0) rotate(-0.6deg);
+  }
+  to {
+    transform: translate3d(18px, -12px, 0) rotate(0.6deg);
+  }
 }
 .ambient {
   display: block;
@@ -1358,6 +1369,9 @@ footer > div {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .noise::before {
+    animation: none;
   }
   *,
   *::before,
