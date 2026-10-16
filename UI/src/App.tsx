@@ -406,6 +406,14 @@ const certificates = [
   },
 
   {
+    issuer: "EWB",
+    title: "EWB Internship",
+    date: "2026",
+    topics: "Engineering · Internship · Professional Experience",
+    file: "EWB_Certificate_Vishal_Bhinde_EWB-INT-2026-0566.pdf",
+  },
+
+  {
     issuer: "Deloitte",
     title: "Technology Virtual Experience",
     date: "2026",
