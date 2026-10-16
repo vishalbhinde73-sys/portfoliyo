@@ -4,9 +4,9 @@ import react from "@vitejs/plugin-react";
 
 import tailwindcss from "@tailwindcss/vite";
 
-import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-import siteConfiguration from "./.figma/make/site.json";
+import siteConfiguration from "./.figma/make/site.json" with { type: "json" };
 
 // Vite config — https://vitejs.dev/config/
 
@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
 
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src"),
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
       },
     },
 
