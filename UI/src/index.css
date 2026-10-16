@@ -126,7 +126,7 @@ button:focus-visible {
     0 0,
     center center,
     center center;
-  opacity: 0.34;
+  opacity: 0.42;
   mask-image: radial-gradient(ellipse at 50% 42%, #000 4%, transparent 88%);
 }
 .noise::before {
@@ -138,14 +138,14 @@ button:focus-visible {
       48deg,
       transparent 0,
       transparent 38px,
-      color-mix(in srgb, var(--brand-secondary) 28%, transparent) 39px,
+      color-mix(in srgb, var(--brand-secondary) 40%, transparent) 39px,
       transparent 40px
     ),
     repeating-linear-gradient(
       -48deg,
       transparent 0,
       transparent 38px,
-      color-mix(in srgb, var(--brand-primary) 26%, transparent) 39px,
+      color-mix(in srgb, var(--brand-primary) 38%, transparent) 39px,
       transparent 40px
     );
   animation: mesh-drift 18s ease-in-out infinite alternate;
@@ -189,16 +189,40 @@ button:focus-visible {
       rgb(91 217 237 / 74%) 2.5px,
       rgb(91 217 237 / 24%) 5px,
       transparent 12px
+    ),
+    radial-gradient(
+      circle,
+      #e8ffff 0 1.5px,
+      rgb(91 217 237 / 88%) 2.5px,
+      rgb(91 217 237 / 30%) 5px,
+      transparent 12px
+    ),
+    radial-gradient(
+      circle,
+      #e8ffff 0 1.5px,
+      rgb(91 217 237 / 84%) 2.5px,
+      rgb(91 217 237 / 28%) 5px,
+      transparent 12px
+    ),
+    radial-gradient(
+      circle,
+      #e8ffff 0 1.5px,
+      rgb(91 217 237 / 80%) 2.5px,
+      rgb(91 217 237 / 26%) 5px,
+      transparent 12px
     );
   background-repeat: no-repeat;
-  background-size: 30px 30px;
+  background-size: 44px 44px;
   background-position:
     12% 28%,
     36% 52%,
     62% 24%,
     84% 66%,
-    54% 82%;
-  filter: drop-shadow(0 0 8px rgb(91 217 237 / 75%));
+    54% 82%,
+    23% 75%,
+    75% 14%,
+    91% 43%;
+  filter: drop-shadow(0 0 16px rgb(91 217 237 / 90%));
   animation: particles-flow 28s ease-in-out infinite;
   transform: translate3d(
     var(--pointer-x, 0px),
@@ -233,7 +257,10 @@ button:focus-visible {
       36% 52%,
       62% 24%,
       84% 66%,
-      54% 82%;
+      54% 82%,
+      23% 75%,
+      75% 14%,
+      91% 43%;
   }
   25% {
     background-position:
@@ -241,7 +268,10 @@ button:focus-visible {
       22% 32%,
       78% 48%,
       62% 42%,
-      72% 67%;
+      72% 67%,
+      44% 22%,
+      56% 79%,
+      20% 35%;
   }
   50% {
     background-position:
@@ -249,7 +279,10 @@ button:focus-visible {
       46% 24%,
       52% 66%,
       38% 58%,
-      34% 38%;
+      34% 38%,
+      67% 54%,
+      28% 43%,
+      73% 76%;
   }
   75% {
     background-position:
@@ -257,7 +290,10 @@ button:focus-visible {
       72% 68%,
       31% 42%,
       56% 28%,
-      18% 60%;
+      18% 60%,
+      82% 37%,
+      41% 61%,
+      48% 19%;
   }
 }
 .ambient {
